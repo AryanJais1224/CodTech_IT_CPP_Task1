@@ -9,13 +9,15 @@ void writeContent(const string& file) {
         cout << "Error opening file for writing.\n";
         return;
     }
-
     cout << "Enter text to write to the file (type 'END' on a new line to finish):\n";
     string inputLine;
     cin.ignore(); // clear input buffer
     while (true) {
         getline(cin, inputLine);
-        if (inputLine == "END") break;
+        if (inputLine == "END") 
+        {
+            break; //Break when end is reached
+        }
         writer << inputLine << "\n";
     }
 
